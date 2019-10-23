@@ -10,19 +10,20 @@
 - server 쪽 express 설치, babel 설정
 - client 쪽 필요없는 파일 제거
 - 루트에 .env, eslint, prettier 설정
-- express cors 설정 중, client에서 .env 못찾음. 잠온다. 커밋해야지
+- 서버, 클라이언트 연결 설정
 
 ### 문제
 
 - 타이틀 후보: 막차렐라, 호박막차
 - 지하철 경로 찾기! API 검색하면 딱 하고 마법같은 툴이 나올 줄 알았음
 - db 어떻게할까? graphql 핫하다는데 사실 아직 잘 모르겠다 뭔지
-- client에서 루트 디렉토리의 .env를 못찾는다.
+- ~~client에서 루트 디렉토리의 .env를 못찾는다.~~
 
 ### 기록
 
 - eslint, prettier 세팅
 - babel로 트랜스파일링 세팅
+- http-proxy-middleare로 CRA 프록시 세팅
 
 ## 구상
 

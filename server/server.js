@@ -1,23 +1,20 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import cors from 'cors';
 
 dotenv.config({ path: '../.env' });
 
 const server = express();
-const port = process.env.SERVER_PORT || null;
+const port = process.env.SERVER_PORT;
 
-server.use(
-    cors({
-        origin: `${process.env.URL}:${process.env.CLIENT_PORT}`,
-    }),
-);
 server.get('/', (req, res) => {
-    res.json({ message: '/' });
+    res.json({ message: `it's api server` });
 });
 
-server.get('/json', (req, res) => {
+server.get('/api/hello', (req, res) => {
     res.json({ message: 'Hello world' });
+});
+server.get('/api/adios', (req, res) => {
+    res.json({ message: 'Adios world' });
 });
 
 server.listen(port, () => {
