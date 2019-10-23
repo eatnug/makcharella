@@ -1,11 +1,8 @@
 import React from 'react';
 import axios from 'axios';
-import 'dotenv/config';
 
 function App() {
-  axios
-    .get(`${process.env.REACT_APP_URL}:${process.env.REACT_APP_SERVER_PORT}`)
-    .then(res => console.log(res));
+  axios.get('/api/hello').then(res => console.log(res));
   return (
     <div className="App">
       <header className="App-header">
