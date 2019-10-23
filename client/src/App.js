@@ -3,7 +3,6 @@ import axios from 'axios';
 import 'dotenv/config';
 
 function App() {
-  console.log(process.env.REACT_APP_URL);
   axios
     .get(`${process.env.REACT_APP_URL}:${process.env.REACT_APP_SERVER_PORT}`)
     .then(res => console.log(res));
